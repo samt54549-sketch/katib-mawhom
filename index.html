@@ -3,74 +3,247 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090909">
-  <meta name="description" content="كاتب موهوم للنشر الرقمي — مساحة للكتب والخواطر والأصوات الأدبية الجديدة.">
-  <title>كاتب موهوم | للنشر الرقمي</title>
+  <title>كاتب موهوم | دار نشر رقمية واستثمار في المحتوى الإبداعي</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="كاتب موهوم - الرئيسية">
-      <span class="brand-mark">ك</span>
-      <span><strong>كاتب موهوم</strong><small>للنشر الرقمي</small></span>
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
-    <nav id="mainNav" class="main-nav">
-      <a href="#home">الرئيسية</a><a href="#books">المكتبة</a><a href="#quotes">خواطر</a><a href="#about">عن المنصة</a>
-      <button class="button button-small" id="loginOpen">دخول / حساب جديد</button>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <p class="eyebrow">مساحة لكل صوت يستحق أن يُسمع</p>
-        <h1>كل حكاية<br><span>تستحق أن تُروى</span></h1>
-        <p class="hero-copy">منصة تجمع الكتب والخواطر والكلمات التي تبحث عن قارئها. ابدأ رحلتك بين الحروف، أو جهّز عملك ليكون جزءًا من مكتبتنا.</p>
-        <div class="hero-actions"><a class="button" href="#books">اكتشف الكتب</a><a class="button button-outline" href="#join">انضم للكتّاب</a></div>
+  <div class="app-layout">
+    <!-- الشريط الجانبي الأيمن -->
+    <aside class="sidebar">
+      <div class="user-profile">
+        <div class="user-avatar">ك</div>
+        <div class="user-info">
+          <strong>كاتب موهوم</strong>
+          <small>المدير التنفيذي ∨</small>
+        </div>
       </div>
-      <div class="hero-art" role="img" aria-label="كتاب مفتوح وزخارف ذهبية">
-        <div class="orb orb-one"></div><div class="orb orb-two"></div>
-        <div class="book-illustration"><div class="book-page"></div><div class="book-page"></div><div class="book-spine"></div></div>
-        <span class="art-star star-one">✦</span><span class="art-star star-two">✧</span><span class="art-star star-three">✦</span>
+
+      <button class="button btn-write">+ ابدأ الكتابة الآن</button>
+
+      <nav class="sidebar-nav">
+        <a href="#novels" class="nav-item active">📚 الروايات</a>
+        <a href="#thoughts" class="nav-item">✍️ الخواطر</a>
+        <a href="#articles" class="nav-item">📰 المقالات</a>
+        <a href="#audiobooks" class="nav-item">🎧 الكتب الصوتية</a>
+        <a href="#continue" class="nav-item">📖 أكمل القراءة</a>
+        <a href="#favorites" class="nav-item">❤️ المفضلة</a>
+        <a href="#purchases" class="nav-item">🛍️ المشتريات</a>
+        <a href="#subscriptions" class="nav-item">🎁 الاشتراكات</a>
+        <a href="#dashboard" class="nav-item">📊 لوحة الكاتب</a>
+      </nav>
+
+      <div class="vip-card">
+        <span class="vip-crown">👑</span>
+        <h4>عضوية مميزة</h4>
+        <p>تمنحك تجربة قراءة فاخرة ومزايا حصرية عديدة</p>
+        <button class="button button-gold">اشترك الآن</button>
       </div>
-    </section>
 
-    <section class="stats" aria-label="مبادئ المنصة">
-      <div><strong>01</strong><span>أصوات أدبية جديدة</span></div><div><strong>02</strong><span>مساحة للخيال والفكر</span></div><div><strong>03</strong><span>رحلة تبدأ بكلمة</span></div>
-    </section>
-
-    <section class="section" id="books">
-      <div class="section-heading"><div><p class="eyebrow">مكتبة المنصة</p><h2>حكايات تنتظر اكتشافك</h2></div><span class="section-note">نماذج تجريبية قابلة للتعديل</span></div>
-      <div class="filter-row"><input id="bookSearch" type="search" placeholder="ابحث عن كتاب أو كاتب..." aria-label="البحث في الكتب"><select id="categoryFilter" aria-label="تصفية حسب النوع"><option value="all">كل التصنيفات</option><option value="رواية">رواية</option><option value="خواطر">خواطر</option><option value="تنمية">تنمية وفكر</option></select></div>
-      <div class="book-grid" id="bookGrid">
-        <article class="book-card" data-title="حين يختار القلب أن ينام" data-author="كاتب موهوم" data-category="رواية"><div class="cover cover-one"><span class="cover-top">كاتب موهوم</span><span class="cover-symbol">☾</span><h3>حين يختار<br>القلب أن ينام</h3><span class="cover-bottom">رواية تجريبية</span></div><div class="book-info"><span class="tag">رواية</span><h3>حين يختار القلب أن ينام</h3><p>بقلم: كاتب موهوم</p><button class="text-button read-sample" data-book="حين يختار القلب أن ينام">اقرأ نبذة ←</button></div></article>
-        <article class="book-card" data-title="رسائل لم تصل" data-author="قلم عابر" data-category="خواطر"><div class="cover cover-two"><span class="cover-top">حروف من الذاكرة</span><span class="cover-symbol">✧</span><h3>رسائل<br>لم تصل</h3><span class="cover-bottom">مجموعة خواطر</span></div><div class="book-info"><span class="tag">خواطر</span><h3>رسائل لم تصل</h3><p>بقلم: قلم عابر</p><button class="text-button read-sample" data-book="رسائل لم تصل">اقرأ نبذة ←</button></div></article>
-        <article class="book-card" data-title="ما وراء الصمت" data-author="صوت جديد" data-category="تنمية"><div class="cover cover-three"><span class="cover-top">تأملات</span><span class="cover-symbol">◇</span><h3>ما وراء<br>الصمت</h3><span class="cover-bottom">فكر وتأمل</span></div><div class="book-info"><span class="tag">تنمية وفكر</span><h3>ما وراء الصمت</h3><p>بقلم: صوت جديد</p><button class="text-button read-sample" data-book="ما وراء الصمت">اقرأ نبذة ←</button></div></article>
+      <div class="sidebar-footer-quote">
+        <p>«الكتابة هي سحر تحوله الكلمات إلى عوالم والخيال إلى حقيقة.»</p>
       </div>
-      <p class="empty-state" id="emptyBooks" hidden>لا توجد نتائج مطابقة. جرّب كلمة بحث أخرى.</p>
-    </section>
+    </aside>
 
-    <section class="quote-section" id="quotes">
-      <p class="eyebrow">من دفاتر الكتّاب</p><h2>«أحيانًا تكون الكلمة بابًا<br>نعبر منه إلى أنفسنا»</h2><p class="quote-signature">— كاتب موهوم</p>
-    </section>
+    <!-- المحتوى الرئيسي -->
+    <div class="main-wrapper">
+      <!-- الهيدر العلوي -->
+      <header class="top-bar">
+        <div class="search-box">
+          <input type="search" placeholder="ابحث عن رواية، كاتب، أو تصنيف..." aria-label="بحث">
+          <span class="search-icon">🔍</span>
+        </div>
 
-    <section class="section join-section" id="join">
-      <div><p class="eyebrow">لديك حكاية؟</p><h2>دع كلماتك تجد طريقها</h2><p>ابدأ بالتعريف بعملك، وسنطوّر لاحقًا نظامًا لاستقبال المخطوطات ومراجعتها ونشرها.</p></div>
-      <a class="button" href="mailto:your-email@example.com?subject=طلب%20انضمام%20إلى%20كاتب%20موهوم">تواصل للنشر</a>
-    </section>
+        <nav class="top-nav">
+          <a href="#home" class="active">الرئيسية</a>
+          <a href="#books">المكتبة</a>
+          <a href="#write">أكتب</a>
+          <a href="#about">عن كاتب موهوم</a>
+          <a href="#subscriptions">الاشتراكات</a>
+        </nav>
 
-    <section class="section about-section" id="about"><p class="eyebrow">من نحن</p><h2>النشر يبدأ بفرصة</h2><p>كاتب موهوم مشروع للنشر الرقمي يطمح إلى منح الكتّاب مساحة لعرض أعمالهم والوصول إلى قرّاء جدد. هذه النسخة واجهة أولية؛ لا ترسل بيانات حساسة ولا تستخدمها لاستقبال مدفوعات قبل ربط الخدمات الفعلية.</p></section>
-  </main>
+        <div class="brand-logo">
+          <h2>كاتب موهوم 🪶</h2>
+          <small>دار نشر رقمية واستثمار في المحتوى الإبداعي</small>
+        </div>
+      </header>
 
-  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">ك</span><span><strong>كاتب موهوم</strong><small>للنشر الرقمي</small></span></a><p>كل الحقوق محفوظة © <span id="year"></span> كاتب موهوم</p><a href="#home" class="back-top">العودة للأعلى ↑</a></footer>
+      <!-- شبكة المحتوى الوسطى واليمنى -->
+      <div class="content-grid">
+        <main class="main-content">
+          <!-- البانر الرئيسي -->
+          <section class="main-banner">
+            <div class="banner-text">
+              <h1>حيثُ تُولد الحكايات<br>تحمي الملكية الفكرية</h1>
+              <p>منصة احترافية للكتاب والقراء والمستثمرين في المحتوى الإبداعي.</p>
+              
+              <div class="features-row">
+                <div class="feat-item">🛡️ عائد استثماري مضمون</div>
+                <div class="feat-item">📈 إحصائيات دقيقة للأداء</div>
+                <div class="feat-item">🖊️ محرر متطور احترافي</div>
+                <div class="feat-item">🔒 حماية كاملة للمحتوى</div>
+              </div>
 
-  <dialog id="loginDialog" class="modal"><form method="dialog" class="modal-close"><button aria-label="إغلاق">×</button></form><p class="eyebrow">مساحة القراء والكتّاب</p><h2>أهلًا بك</h2><p class="modal-warning">هذه واجهة تجريبية فقط. تسجيل الدخول الحقيقي يحتاج خدمة مصادقة وقاعدة بيانات.</p><label for="demoEmail">البريد الإلكتروني (للعرض فقط)</label><input id="demoEmail" type="email" placeholder="name@example.com"><button class="button" id="demoLogin" type="button">تجربة الواجهة</button><p id="loginMessage" class="inline-message" aria-live="polite"></p></dialog>
+              <a class="button button-gold" href="#books">📖 استكشف المكتبة</a>
+            </div>
+            <div class="banner-image">
+              <div class="book-cover-mockup">
+                <h3>كاتب موهوم</h3>
+                <p>KATIB MAWHOM</p>
+              </div>
+            </div>
+          </section>
 
-  <dialog id="bookDialog" class="modal"><form method="dialog" class="modal-close"><button aria-label="إغلاق">×</button></form><p class="eyebrow">من مكتبة كاتب موهوم</p><h2 id="bookDialogTitle">عنوان الكتاب</h2><p id="bookDialogText"></p><p class="modal-warning">هذه نبذة تجريبية؛ أضف نصوصك وكتبك التي تملك حقوق نشرها قبل إطلاق الموقع.</p><button class="button" id="bookDialogClose">إغلاق</button></dialog>
+          <!-- تصنيفات الروايات -->
+          <section class="categories-section">
+            <h3>التصنيفات</h3>
+            <div class="category-tags">
+              <button class="tag-btn active">كل التصنيفات</button>
+              <button class="tag-btn">📖 روايات</button>
+              <button class="tag-btn">💕 رومانسية</button>
+              <button class="tag-btn">🪐 خيال</button>
+              <button class="tag-btn">🔍 غموض وإثارة</button>
+              <button class="tag-btn">🏛️ تاريخية</button>
+              <button class="tag-btn">🔬 علمية</button>
+            </div>
+          </section>
 
-  <section class="comments-section section" id="comments"><p class="eyebrow">تفاعل القرّاء</p><h2>اترك أثرًا بكلماتك</h2><p class="modal-warning">التعليقات في هذه النسخة محفوظة داخل المتصفح فقط، وليست تعليقات عامة. سنربطها بقاعدة بيانات في مرحلة لاحقة.</p><form id="commentForm" class="comment-form"><label for="commentName">اسمك</label><input id="commentName" maxlength="40" required placeholder="اكتب اسمك"><label for="commentText">تعليقك</label><textarea id="commentText" maxlength="500" required placeholder="اكتب تعليقك هنا..." rows="3"></textarea><button class="button" type="submit">إضافة التعليق التجريبي</button></form><div id="commentList" class="comment-list" aria-live="polite"></div></section>
+          <!-- الروايات المميزة -->
+          <section class="books-section">
+            <div class="section-title-row">
+              <h3>الروايات المميزة</h3>
+              <a href="#" class="link-all">عرض الكل ←</a>
+            </div>
 
-  <script src="script.js"></script>
+            <div class="books-cards-grid">
+              <article class="gold-book-card">
+                <div class="card-badge">مميز</div>
+                <div class="card-thumb thumb-1">
+                  <h4>ظل الخريف</h4>
+                </div>
+                <div class="card-details">
+                  <h4>ظل الخريف</h4>
+                  <p class="author">بقلم: سارة النور</p>
+                  <div class="card-meta">
+                    <span class="rating">⭐ 4.8</span>
+                    <span class="lock-icon">🔒</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="gold-book-card">
+                <div class="card-badge">مميز</div>
+                <div class="card-thumb thumb-2">
+                  <h4>أحلام غير مكتملة</h4>
+                </div>
+                <div class="card-details">
+                  <h4>أحلام غير مكتملة</h4>
+                  <p class="author">بقلم: محمد أمين</p>
+                  <div class="card-meta">
+                    <span class="rating">⭐ 4.6</span>
+                    <span class="lock-icon">🔒</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="gold-book-card">
+                <div class="card-badge">مميز</div>
+                <div class="card-thumb thumb-3">
+                  <h4>مدينة الصمت</h4>
+                </div>
+                <div class="card-details">
+                  <h4>مدينة الصمت</h4>
+                  <p class="author">بقلم: ليلى العامر</p>
+                  <div class="card-meta">
+                    <span class="rating">⭐ 4.7</span>
+                    <span class="lock-icon">🔒</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="gold-book-card">
+                <div class="card-badge">مميز</div>
+                <div class="card-thumb thumb-4">
+                  <h4>وجود لا يُنسى</h4>
+                </div>
+                <div class="card-details">
+                  <h4>وجود لا يُنسى</h4>
+                  <p class="author">بقلم: أحمد الكاتب</p>
+                  <div class="card-meta">
+                    <span class="rating">⭐ 4.9</span>
+                    <span class="lock-icon">🔒</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </main>
+
+        <!-- العمود الأيسر (الإحصائيات والأنشطة) -->
+        <aside class="widgets-aside">
+          <!-- كارت إحصائيات المنصة -->
+          <div class="widget-box">
+            <h3>📊 إحصائيات المنصة</h3>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <small>القراء النشطين</small>
+                <strong>+250,000</strong>
+              </div>
+              <div class="stat-card">
+                <small>الكتب المنشورة</small>
+                <strong>+12,540</strong>
+              </div>
+              <div class="stat-card">
+                <small>الأرباح هذا الشهر</small>
+                <strong class="gold-text">$ 25,680</strong>
+              </div>
+              <div class="stat-card">
+                <small>الروايات</small>
+                <strong>+8,760</strong>
+              </div>
+            </div>
+            <button class="button button-outline full-width">👑 لوحة التحكم (الأدمن)</button>
+          </div>
+
+          <!-- كارت اشتراك الباقات -->
+          <div class="widget-box vip-banner-box">
+            <h3>اشترك للوصول إلى الروايات المميزة والحصرية 👑</h3>
+            <button class="button button-gold">عرض الباقات</button>
+          </div>
+
+          <!-- النشاط الأخير -->
+          <div class="widget-box">
+            <h3>⚡ النشاط الأخير</h3>
+            <ul class="activity-list">
+              <li>
+                <strong>تم نشر فصل جديد في رواية: ظل الخريف</strong>
+                <small>منذ 15 دقيقة</small>
+              </li>
+              <li>
+                <strong>تمت إضافة رواية جديدة: أحلام غير مكتملة</strong>
+                <small>منذ 35 دقيقة</small>
+              </li>
+              <li>
+                <strong>تم شراء اشتراك مميز</strong>
+                <small>منذ ساعة واحدة</small>
+              </li>
+            </ul>
+            <button class="button button-outline full-width">عرض كل النشاط</button>
+          </div>
+        </aside>
+      </div>
+
+      <!-- الفوتر -->
+      <footer class="app-footer">
+        <div class="footer-links">
+          <a href="#">من نحن</a>
+          <a href="#">الشروط والأحكام</a>
+          <a href="#">سياسة الخصوصية</a>
+          <a href="#">اتصل بنا</a>
+          <a href="#">الدعم الفني</a>
+        </div>
+        <p>جميع الحقوق محفوظة © 2026 كاتب موهوم 🪶</p>
+      </footer>
+    </div>
+  </div>
 </body>
 </html>
