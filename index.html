@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="كاتب موهوم للنشر الرقمي — مساحة للكتب والخواطر والأصوات الأدبية الجديدة.">
+  <title>كاتب موهوم | للنشر الرقمي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="كاتب موهوم - الرئيسية">
+      <span class="brand-mark">ك</span>
+      <span><strong>كاتب موهوم</strong><small>للنشر الرقمي</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+    <nav id="mainNav" class="main-nav">
+      <a href="#home">الرئيسية</a><a href="#books">المكتبة</a><a href="#quotes">خواطر</a><a href="#about">عن المنصة</a>
+      <button class="button button-small" id="loginOpen">دخول / حساب جديد</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">مساحة لكل صوت يستحق أن يُسمع</p>
+        <h1>كل حكاية<br><span>تستحق أن تُروى</span></h1>
+        <p class="hero-copy">منصة تجمع الكتب والخواطر والكلمات التي تبحث عن قارئها. ابدأ رحلتك بين الحروف، أو جهّز عملك ليكون جزءًا من مكتبتنا.</p>
+        <div class="hero-actions"><a class="button" href="#books">اكتشف الكتب</a><a class="button button-outline" href="#join">انضم للكتّاب</a></div>
+      </div>
+      <div class="hero-art" role="img" aria-label="كتاب مفتوح وزخارف ذهبية">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="book-illustration"><div class="book-page"></div><div class="book-page"></div><div class="book-spine"></div></div>
+        <span class="art-star star-one">✦</span><span class="art-star star-two">✧</span><span class="art-star star-three">✦</span>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="مبادئ المنصة">
+      <div><strong>01</strong><span>أصوات أدبية جديدة</span></div><div><strong>02</strong><span>مساحة للخيال والفكر</span></div><div><strong>03</strong><span>رحلة تبدأ بكلمة</span></div>
+    </section>
+
+    <section class="section" id="books">
+      <div class="section-heading"><div><p class="eyebrow">مكتبة المنصة</p><h2>حكايات تنتظر اكتشافك</h2></div><span class="section-note">نماذج تجريبية قابلة للتعديل</span></div>
+      <div class="filter-row"><input id="bookSearch" type="search" placeholder="ابحث عن كتاب أو كاتب..." aria-label="البحث في الكتب"><select id="categoryFilter" aria-label="تصفية حسب النوع"><option value="all">كل التصنيفات</option><option value="رواية">رواية</option><option value="خواطر">خواطر</option><option value="تنمية">تنمية وفكر</option></select></div>
+      <div class="book-grid" id="bookGrid">
+        <article class="book-card" data-title="حين يختار القلب أن ينام" data-author="كاتب موهوم" data-category="رواية"><div class="cover cover-one"><span class="cover-top">كاتب موهوم</span><span class="cover-symbol">☾</span><h3>حين يختار<br>القلب أن ينام</h3><span class="cover-bottom">رواية تجريبية</span></div><div class="book-info"><span class="tag">رواية</span><h3>حين يختار القلب أن ينام</h3><p>بقلم: كاتب موهوم</p><button class="text-button read-sample" data-book="حين يختار القلب أن ينام">اقرأ نبذة ←</button></div></article>
+        <article class="book-card" data-title="رسائل لم تصل" data-author="قلم عابر" data-category="خواطر"><div class="cover cover-two"><span class="cover-top">حروف من الذاكرة</span><span class="cover-symbol">✧</span><h3>رسائل<br>لم تصل</h3><span class="cover-bottom">مجموعة خواطر</span></div><div class="book-info"><span class="tag">خواطر</span><h3>رسائل لم تصل</h3><p>بقلم: قلم عابر</p><button class="text-button read-sample" data-book="رسائل لم تصل">اقرأ نبذة ←</button></div></article>
+        <article class="book-card" data-title="ما وراء الصمت" data-author="صوت جديد" data-category="تنمية"><div class="cover cover-three"><span class="cover-top">تأملات</span><span class="cover-symbol">◇</span><h3>ما وراء<br>الصمت</h3><span class="cover-bottom">فكر وتأمل</span></div><div class="book-info"><span class="tag">تنمية وفكر</span><h3>ما وراء الصمت</h3><p>بقلم: صوت جديد</p><button class="text-button read-sample" data-book="ما وراء الصمت">اقرأ نبذة ←</button></div></article>
+      </div>
+      <p class="empty-state" id="emptyBooks" hidden>لا توجد نتائج مطابقة. جرّب كلمة بحث أخرى.</p>
+    </section>
+
+    <section class="quote-section" id="quotes">
+      <p class="eyebrow">من دفاتر الكتّاب</p><h2>«أحيانًا تكون الكلمة بابًا<br>نعبر منه إلى أنفسنا»</h2><p class="quote-signature">— كاتب موهوم</p>
+    </section>
+
+    <section class="section join-section" id="join">
+      <div><p class="eyebrow">لديك حكاية؟</p><h2>دع كلماتك تجد طريقها</h2><p>ابدأ بالتعريف بعملك، وسنطوّر لاحقًا نظامًا لاستقبال المخطوطات ومراجعتها ونشرها.</p></div>
+      <a class="button" href="mailto:your-email@example.com?subject=طلب%20انضمام%20إلى%20كاتب%20موهوم">تواصل للنشر</a>
+    </section>
+
+    <section class="section about-section" id="about"><p class="eyebrow">من نحن</p><h2>النشر يبدأ بفرصة</h2><p>كاتب موهوم مشروع للنشر الرقمي يطمح إلى منح الكتّاب مساحة لعرض أعمالهم والوصول إلى قرّاء جدد. هذه النسخة واجهة أولية؛ لا ترسل بيانات حساسة ولا تستخدمها لاستقبال مدفوعات قبل ربط الخدمات الفعلية.</p></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">ك</span><span><strong>كاتب موهوم</strong><small>للنشر الرقمي</small></span></a><p>كل الحقوق محفوظة © <span id="year"></span> كاتب موهوم</p><a href="#home" class="back-top">العودة للأعلى ↑</a></footer>
+
+  <dialog id="loginDialog" class="modal"><form method="dialog" class="modal-close"><button aria-label="إغلاق">×</button></form><p class="eyebrow">مساحة القراء والكتّاب</p><h2>أهلًا بك</h2><p class="modal-warning">هذه واجهة تجريبية فقط. تسجيل الدخول الحقيقي يحتاج خدمة مصادقة وقاعدة بيانات.</p><label for="demoEmail">البريد الإلكتروني (للعرض فقط)</label><input id="demoEmail" type="email" placeholder="name@example.com"><button class="button" id="demoLogin" type="button">تجربة الواجهة</button><p id="loginMessage" class="inline-message" aria-live="polite"></p></dialog>
+
+  <dialog id="bookDialog" class="modal"><form method="dialog" class="modal-close"><button aria-label="إغلاق">×</button></form><p class="eyebrow">من مكتبة كاتب موهوم</p><h2 id="bookDialogTitle">عنوان الكتاب</h2><p id="bookDialogText"></p><p class="modal-warning">هذه نبذة تجريبية؛ أضف نصوصك وكتبك التي تملك حقوق نشرها قبل إطلاق الموقع.</p><button class="button" id="bookDialogClose">إغلاق</button></dialog>
+
+  <section class="comments-section section" id="comments"><p class="eyebrow">تفاعل القرّاء</p><h2>اترك أثرًا بكلماتك</h2><p class="modal-warning">التعليقات في هذه النسخة محفوظة داخل المتصفح فقط، وليست تعليقات عامة. سنربطها بقاعدة بيانات في مرحلة لاحقة.</p><form id="commentForm" class="comment-form"><label for="commentName">اسمك</label><input id="commentName" maxlength="40" required placeholder="اكتب اسمك"><label for="commentText">تعليقك</label><textarea id="commentText" maxlength="500" required placeholder="اكتب تعليقك هنا..." rows="3"></textarea><button class="button" type="submit">إضافة التعليق التجريبي</button></form><div id="commentList" class="comment-list" aria-live="polite"></div></section>
+
+  <script src="script.js"></script>
+</body>
+</html>
